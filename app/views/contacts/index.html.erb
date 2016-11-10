@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+    <p><%= notice %></p>
+    <h1>お問い合わせ一覧</h1>
+    <% @contacts.each do |contact| %>
+    <div class="row">
+      <p>名前: <%= contact.name %></p>
+      <p>メールアドレス: <%= contact.email %></p>
+      <p>お問い合わせ内容: <%= contact.content %></p>
+      <%= link_to "お問い合わせを削除する", contact_path(contact), method: :delete, data: { confirm: '本当に削除していいですか？'}, class: 'btn btn-default btn-sm btn btn-danger' %>
+    </div>
+    <% end %>
+  </div>
+</div>
