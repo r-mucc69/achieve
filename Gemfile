@@ -48,3 +48,6 @@ gem 'twitter-bootstrap-rails'
 
   # DIVE05で追加
 gem 'jquery-turbolinks'
+
+  # DIVE07で追加
+gem 'rails_12factor', group: :production
