@@ -51,3 +51,6 @@ gem 'jquery-turbolinks'
 
   # DIVE07で追加
 gem 'rails_12factor', group: :production
+
+  #DIVE08で追加
+gem 'devise'
