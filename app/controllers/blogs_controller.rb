@@ -4,7 +4,7 @@ class BlogsController < ApplicationController
   
   def index
     @blogs = Blog.all
-  end
+   end
   
   def new
     if params[:back]
@@ -15,11 +15,12 @@ class BlogsController < ApplicationController
   end
 
   def create
-    @blog = Blog.create(blogs_params)
+    @blog = Blog.new(blogs_params)
+    @blog.user_id = current_user.id
     if @blog.save
       redirect_to blogs_path, notice: "ブログを作成しました！"
     else
-      render action: 'new'
+      render 'new'
     end
   end
   
@@ -43,7 +44,7 @@ class BlogsController < ApplicationController
     @blog = Blog.new(blogs_params)
     render :new if @blog.invalid?
   end
-
+  
   private
     def blogs_params
       params.require(:blog).permit(:title, :content)

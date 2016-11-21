@@ -54,3 +54,6 @@ gem 'rails_12factor', group: :production
 
   #DIVE08で追加
 gem 'devise'
+
+  #DIVE09で追加
+gem 'faker'
