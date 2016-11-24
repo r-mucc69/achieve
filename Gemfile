@@ -43,17 +43,8 @@ group :development, :test do
   gem 'spring'
 end
 
-  # DIVE4で追加
 gem 'twitter-bootstrap-rails'
-
-  # DIVE05で追加
 gem 'jquery-turbolinks'
-
-  # DIVE07で追加
 gem 'rails_12factor', group: :production
-
-  #DIVE08で追加
 gem 'devise'
-
-  #DIVE09で追加
 gem 'faker'
